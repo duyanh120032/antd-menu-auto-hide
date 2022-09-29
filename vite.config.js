@@ -10,4 +10,23 @@ export default defineConfig({
       directoryAsNamespace: true,
     }),
   ],
+  css: {
+    preprocessorOptions: {
+      less: {
+        modifyVars: {
+          'border-radius-base': '10px',
+          'blue-base': '#efa',
+          'layout-trigger-background': '#00000',
+          'layout-header-background': '#000000',
+        },
+        javascriptEnabled: true,
+      },
+      // scss: {
+      //   additionalData: `
+      //   @use 'sass:math';
+      //   @import "src/styles/global.scss";
+      //   `,
+      // },
+    },
+  },
 });
